@@ -1,5 +1,6 @@
 {
-  "name": "aws-ram",
+  "name": "@jttc/aws-ram",
+  "description": "AWS CDK L2 construct for Resource Access Manager",
   "repository": {
     "type": "git",
     "url": "git@github.com:JumpToTheCloud/aws-ram.git"
@@ -8,6 +9,7 @@
     "build": "npx projen build",
     "bump": "npx projen bump",
     "clobber": "npx projen clobber",
+    "commit": "npx projen commit",
     "compat": "npx projen compat",
     "compile": "npx projen compile",
     "default": "npx projen default",
@@ -22,6 +24,8 @@
     "pre-compile": "npx projen pre-compile",
     "release": "npx projen release",
     "test": "npx projen test",
+    "test:snapshot": "npx projen test:snapshot",
+    "test:snapshot:update": "npx projen test:snapshot:update",
     "test:watch": "npx projen test:watch",
     "unbump": "npx projen unbump",
     "upgrade": "npx projen upgrade",
@@ -34,41 +38,46 @@
     "organization": false
   },
   "devDependencies": {
-    "@stylistic/eslint-plugin": "^2",
     "@types/jest": "^29.5.14",
     "@types/node": "^22.12.0",
     "@typescript-eslint/eslint-plugin": "^8",
     "@typescript-eslint/parser": "^8",
-    "aws-cdk-lib": "2.1.0",
+    "aws-cdk-lib": "2.173.0",
     "commit-and-tag-version": "^12",
-    "constructs": "10.0.5",
+    "commitizen": "^4.3.1",
+    "constructs": "10.4.2",
+    "cz-customizable": "^7.4.0",
     "eslint": "^9",
+    "eslint-config-prettier": "^10.0.1",
     "eslint-import-resolver-typescript": "^3.7.0",
     "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-prettier": "^5.2.3",
     "jest": "^29.7.0",
     "jest-junit": "^16",
+    "jest-runner-groups": "^2.2.0",
     "jsii": "~5.7.0",
     "jsii-diff": "^1.106.0",
     "jsii-docgen": "^10.5.0",
     "jsii-pacmak": "^1.106.0",
     "jsii-rosetta": "~5.7.0",
+    "prettier": "^3.4.2",
     "projen": "^0.91.6",
     "ts-jest": "^29.2.5",
     "ts-node": "^10.9.2",
     "typescript": "^5.7.3"
   },
   "peerDependencies": {
-    "aws-cdk-lib": "^2.1.0",
-    "constructs": "^10.0.5"
+    "aws-cdk-lib": "^2.173.0",
+    "constructs": "^10.4.2"
   },
   "keywords": [
-    "cdk"
+    "aws",
+    "cdk",
+    "ram",
+    "resource access manager"
   ],
   "main": "lib/index.js",
   "license": "Apache-2.0",
-  "publishConfig": {
-    "access": "public"
-  },
   "version": "0.0.0",
   "jest": {
     "coverageProvider": "v8",
